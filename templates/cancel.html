@@ -1,0 +1,21 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}Canceled!{% endblock %}
+{% block content %}
+<div class="g" style="color: red;">
+<div class="container px-4 px-lg-5">
+    <div class="gg">
+        <h1>Canceled</h1>
+    </div>
+</div>
+</div>
+<section>
+<div class="container px-4 px-lg-5 back">
+    <div class="container px-4 px-lg-5">
+      <div class="col-lg-8 col-md-10 mx-auto content" style="text-align: center;">
+            <h1 style="color: white; margin-bottom: 50px; padding-top: 50px;">Forgot to add something to your cart? <hr> Shop around then come back to pay!</h1>
+			<a class="btn btn-dark" href="{{url_for('home')}}">Dashboard</a>
+        </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

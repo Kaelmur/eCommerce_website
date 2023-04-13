@@ -1,0 +1,24 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/form.html" as wtf %}
+{% block title %}Add{% endblock %}
+{% block content %}
+<div class="g">
+<div class="container px-4 px-lg-5">
+    <div class="gg">
+        <h1>Add game to Database</h1>
+    </div>
+</div>
+</div>
+<style>
+    body {
+        background-color: #FFFFE8;
+    }
+</style>
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto content">
+            {{ wtf.render_form(form, novalidate=True, button_map={"submit": "dark"}) }}
+        </div>
+    </div>
+  </div>
+{% endblock %}

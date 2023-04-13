@@ -1,0 +1,24 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}Success!{% endblock %}
+{% block content %}
+<div class="g">
+<div class="container px-4 px-lg-5">
+    <div class="gg">
+        <h1>{{game.name}}</h1>
+    </div>
+</div>
+</div>
+<section>
+<div class="container px-4 px-lg-5 back">
+    <div class="container px-4 px-lg-5">
+      <div class="col-lg-8 col-md-10 mx-auto content" style="text-align: center;">
+            <div class="card" style="width: 18rem; margin-top: 20px; margin-left: 60px; text-align: center; display: inline-block; border-color: black; margin-bottom: 10px;" id="card">
+            <img src="{{ game.img_url }}" class="card-img-top">
+            </div>
+            <h1 style="color: white; margin-bottom: 50px;;">Congratulation you bought the game!</h1>
+			<a class="btn btn-dark" href="{{url_for('home')}}">Dashboard</a>
+        </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

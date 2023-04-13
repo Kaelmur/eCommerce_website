@@ -1,0 +1,32 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/form.html" as wtf %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="g" style="background-color: #FFFFE8;">
+<div class="container px-4 px-lg-5">
+    <div class="gg">
+        <h1>Login</h1>
+    </div>
+</div>
+    </div>
+<style>
+    body {
+        background-color: #FFFFE8;
+    }
+</style>
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto content">
+          <div style="color: red;">
+            {% with messages = get_flashed_messages() %}
+            {{ messages[0] }}
+            {% endwith %}
+          </div>
+            {% if error: %}
+            <p class="error"><strong>Error:</strong> {{error}}</p>
+            {% endif %}
+            {{ wtf.render_form(form, novalidate=True, button_map={"submit": "dark"}) }}
+        </div>
+    </div>
+  </div>
+{% endblock %}
